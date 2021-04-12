@@ -12,9 +12,9 @@
 
  ### General project setup
  general:
- unsafeMode: false
- projectName: 'cloud-cap-s4ems-bp'
- productiveBranch: 'main'
+   unsafeMode: false
+   projectName: 'cloud-cap-s4ems-bp'
+   pipeline: 'sap-cloud-sdk'
 
  ### Step-specific configuration
  steps:
@@ -23,8 +23,12 @@
  npmExecute:
      dockerImage: 'ppiper/node-browsers:v2'
  cloudFoundryDeploy:
-     dockerImage: 'ppiper/cf-cli'
-     mtaDeployParameters: '-f --version-rule ALL'
+   cloudFoundry:
+     credentialsId:'cloud-credentials'
+     apiEndpoint:'https://api.cf.eu10.hana.ondemand.com'
+     org:'SFMissionAkankshaCw14'
+     space:'dev
+   mtaDeployParameters: '-f --version-rule ALL'
  sapNexusStage:
      stagingProfile: 'integration'
      repositoryFormat: 'npm'
@@ -39,33 +43,38 @@
 
  ### Stage-specific configuration
  stages:
- npmAudit:
-     auditedAdvisories:
-     # high
-     - 550  
-     - 593
-     - 1184
-     - 755
-     - 1065
-     - 1164
-     - 1316
-     - 1324
-     - 1325
-     # moderate
-     - 535
-     - 1300
+    Release:
+       CloudFoundryDeploy: true
+    Build:
+       npmExecuteLint: true 
+         
+#  npmAudit:
+#      auditedAdvisories:
+#      # high
+#      - 550  
+#      - 593
+#      - 1184
+#      - 755
+#      - 1065
+#      - 1164
+#      - 1316
+#      - 1324
+#      - 1325
+#      # moderate
+#      - 535
+#      - 1300
  
- lint:
-     ui5BestPractices:
-     failThreshold:
-         error: 100
-         warning: 500
-         info: 1000
+#  lint:
+#      ui5BestPractices:
+#      failThreshold:
+#          error: 100
+#          warning: 500
+#          info: 1000
      
- productionDeployment:
-     cfTargets:
-     - org:'SFMissionAkankshaCw14'
-            space:'dev'
-            appName:'cloud-sf-extension-cap-sample'
-            apiEndpoint:'https://api.cf.eu10.hana.ondemand.com'
-            credentialsId:'cloud-credentials'
+#  productionDeployment:
+#      cfTargets:
+#      - org:'SFMissionAkankshaCw14'
+#             space:'dev'
+#             appName:'cloud-sf-extension-cap-sample'
+#             apiEndpoint:'https://api.cf.eu10.hana.ondemand.com'
+#             credentialsId:'cloud-credentials'
