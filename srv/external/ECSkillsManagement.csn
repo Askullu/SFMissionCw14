@@ -2320,6 +2320,195 @@
         }
       }
     },
+<<<<<<< HEAD
+=======
+    "ECSkillsManagement.RoleCompetencyBehaviorMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RoleEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "behaviorMappingEntity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "competency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_en_DEBUG": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_en_DEBUG": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "behaviorMappingEntityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.BehaviorMappingEntity"
+        },
+        "competencyNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyEntity"
+        }
+      }
+    },
+>>>>>>> 92e8633ca48381e289b0d685f6e9250f63cca5b8
     "ECSkillsManagement.JDTemplateFamilyMapping": {
       "kind": "entity",
       "@cds.persistence.skip": true,
