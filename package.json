@@ -1,5 +1,4 @@
 {
-"<<<<<<< HEAD":{
     "name": "cloud-sf-extension-cap-sample",
     "version": "1.0.0",
     "description": "Successfactors Extension Application",
@@ -16,7 +15,6 @@
         "passport": "^0.4.1",
         "sqlite3": "^5.0.2"
     },
-
     "scripts": {
         "start": "cds run",
         "build": "cds build/all --clean"
@@ -38,7 +36,6 @@
                     }
                 }
             }
-        
         },
         "requires": {
             "uaa": {
@@ -82,86 +79,7 @@
             }
         },
         "odata": {
-                    "version": "v4",
-                    "=======":
-            {
-                    "name": "cloud-sf-extension-cap-sample",
-                    "version": "1.0.0",
-                    "description": "Successfactors Extension Application",
-                    "repository": "https://github.com/SAP-samples/cloud-sf-extension-cap-sample.git",
-                    "license": "Apache License 2.0",
-                    "dependencies": {
-                        "@sap/audit-logging": "^3.1.0",
-                        "@sap/hana-client": "^2.4.196",
-                        "@sap/cds": "4.6.5",
-                        "@sap/cds-runtime": "2.9.7",
-                        "@sap/xb-msg-amqp-v100": "^0.9.19",
-                        "@sap/xsenv": "^2.2.0",
-                        "@sap/xssec": "2.2.5",
-                        "express": "^4",
-                        "passport": "^0.4.1"
-            }
+            "version": "v4"
         }
-  },
-  "devDependencies": {
-    "@sap/cds-dk": "^2.0.8"
-  },
-  "engines": {
-    "node": "^10"
-  },
-  "scripts": {
-    "start": "cds run",
-    "build": "cds build/all --clean"
-  },
-  "cds": {
-    "hana": {
-      "deploy-format": "hdbtable"
-    },
-    "requires": {
-      "uaa": {
-        "kind": "xsuaa"
-      },
-      "messaging": {
-        "kind": "enterprise-messaging-shared"
-      },
-      "db": {
-        "kind": "hana"
-      },
-      "ECSkillsManagement": {
-        "kind": "odata",
-        "model": "srv/external/ECSkillsManagement",
-        "credentials": {
-         "destination": "sfextension-service", 
-         "path": "/odata/v2",
-         "requestTimeout": 18000000,
-         ">>>>>>>":"92e8633ca48381e289b0d685f6e9250f63cca5b8" 
-        }
-      },
-      "FoundationPlatformPLT": {
-        "kind": "odata",
-        "model": "srv/external/FoundationPlatformPLT",
-        "credentials": {
-        "destination": "sfextension-service", "path": "/odata/v2",
-        "requestTimeout": 18000000
     }
-      },
-      "PLTUserManagement": {
-        "kind": "odata",
-        "model": "srv/external/PLTUserManagement",
-        "credentials": {
-        "destination": "sfextension-service", "path": "/odata/v2",
-         "requestTimeout": 18000000
-        }
-      }
-    
-    },
-    "odata": {
-      "version": "v4"
-    }
-  
 }
-}
-}
-}
-    
-    
